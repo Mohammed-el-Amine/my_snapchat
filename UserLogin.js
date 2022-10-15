@@ -10,19 +10,6 @@ export const UserLogIn = () => {
     const [password, setPassword] = useState("");
 
     function onLogin() {
-
-        //Alert.alert('LOG:', `email => ${email} & password => ${password}`);
-        //     fetch('http://snapi.epitech:8000/connection/', {
-        //   method: 'POST',
-        //   headers: {
-        //     Accept: 'application/json',
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify({
-        //     firstParam: 'email',
-        //     secondParam: 'password'
-        //   })
-        // });
         const config = { headers: { 'Content-Type': "application/json", Accept: "application/json" } };
         axios.post('http://snapi.epitech.eu:8000/connection/', { email, password }, config).then(response => {
             // const token = response.data.data["token"];
